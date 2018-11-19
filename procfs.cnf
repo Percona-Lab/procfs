@@ -1,0 +1,13 @@
+/proc/loadavg
+/proc/stat
+/proc/self/{stat,io,numa_maps}
+/proc/version
+/proc/cpuinfo
+/proc/irq/*/*
+/proc/net/dev
+/proc/softirqs
+/proc/sys/fs/file-nr
+/proc/net/sockstat{,_rhe4}
+/proc/net/tcpstat
+/proc/self/net/netstat
+/proc/spl/kstat/zfs/arcstats
