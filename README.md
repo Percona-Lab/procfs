@@ -19,7 +19,7 @@ last_unhandled 4294667480 ms
 5. In mysql-cli run install plugin sql command: `INSTALL PLUGIN procfs SONAME 'procfs.so';`
 
 ## Configuration
-The plugin reads datadir/procfs.cnf file during mysql startup or initial plugin installation. 
+The plugin reads datadir/procfs.cnf file and caches files satisfying to all patterns for next 60 seconds.
 procfs.cnf should contain paths to /sys or /proc files, one file per line. In addition you can use shell glob(7) syntax to specify multiple files:
 ```
 /proc/cpuinfo
