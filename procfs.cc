@@ -272,7 +272,7 @@ static int fill_procfs_view(THD *thd,
       = procfs_plugin::files.begin(); fname != procfs_plugin::files.end(); ++fname) {
     if (cond != 0 && in_args.size() > 0 && in_args.find(*fname) == in_args.end())
       continue;
-#if MYSQL_VERSION_ID >= 80002
+#if MYSQL_VERSION_ID >= 80012
     if (cond != 0 && like_arg.size() > 0 &&
         wild_compare(fname->c_str(), fname->size(), like_arg.c_str(), like_arg.size(), 0) )
       continue;
