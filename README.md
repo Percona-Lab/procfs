@@ -23,12 +23,12 @@ The plugin reads datadir/procfs.cnf file and caches files satisfying to all patt
 procfs.cnf should contain paths to /sys or /proc files, one file per line. In addition you can use shell glob(7) syntax to specify multiple files:
 ```
 /proc/cpuinfo
-/proc/self/{stat,io,numa_maps}
+/sys/block/?d[a-z]/stat
 /proc/irq/*/*
 ```
 It's safe to specify path non-existent on this system or directories. The plugin silently skips invalid entries or matched directories.
 ```
-/proc/net/sockstat{,_rhe4}
+/proc/net/sockstat*
 ```
 glob expansion happens only during mysqld startup or plugin installation, you will not see the file appeared after mysqld was started without mysqld service restart.
 
