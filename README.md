@@ -1,5 +1,5 @@
 # procfs
-procfs mysql `information_schema` plugin allows to get access to the row, unformatted contents of /proc and /sys files with SQL queries.
+procfs mysql `information_schema` plugin allows to get access to the raw, unformatted contents of /proc and /sys files with SQL queries.
 It could be useful for agent-less monitoring systems, for providing access to disk, networking and cpu statistics in cloud systems just with standard mysql protocol.
 ```
 mysql> SELECT contents FROM information_schema.procfs WHERE file LIKE '/proc/irq/9/spurious'\G
